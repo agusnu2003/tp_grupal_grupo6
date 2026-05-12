@@ -14,28 +14,44 @@
     border-left: 4px solid #333;
 }
 
-/* Imágenes y Placeholders */
-.article-img, .article-img-small, .ad-img {
-    background-color: #ddd;
+/* Imágenes */
+.article-img, .article-img-small {
     width: 100%;
-    min-height: 150px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     margin-bottom: 15px;
+    overflow: hidden;
+}
+
+.article-img img, .ad-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.article-img-small img {
+    width: 100%;
+    height: auto; /* Permite que la imagen mantenga su proporción original sin cortarse */
+    max-height: 250px; /* Limita la altura por si es una imagen muy vertical */
+    object-fit: contain; /* Asegura que se vea completa si alcanza la altura máxima */
+    display: block;
+}
+
+/* Estilo para cuando no hay imagen real (para mantener la estructura visual) */
+.placeholder-img[src=""] {
+    background-color: #ddd;
+    min-height: 150px;
     position: relative;
     border: 1px dashed #999;
 }
 
-.article-img::after, .article-img-small::after, .ad-img::after {
+.placeholder-img[src=""]::after {
     content: 'Espacio para imagen';
     color: #888;
     font-size: 0.8rem;
-}
-
-.placeholder-img, .ad-img {
-    max-width: 100%;
-    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 /* Publicidades */
