@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diario El Horizonte | Noticias de hoy</title>
+    <meta name="description" content="Portada de noticias del Diario El Horizonte. Tu fuente de información diaria.">
+    <!-- Vinculamos los archivos CSS por separado como se solicitó -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <div class="header-top">
+                <span class="date" id="current-date">Lunes, 11 de Mayo de 2026</span>
+                <span class="location">Buenos Aires, Argentina</span>
+            </div>
+            <div class="logo-container">
+                <h1 id="main-title">EL HORIZONTE</h1>
+            </div>
+        </div>
+    </header>
+
+    <nav class="main-nav">
+        <div class="nav-container">
+            <!-- Icono hamburguesa para mobile -->
+            <div class="mobile-menu-icon" id="hamburger-menu">
+                <span>&#9776;</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#">Política</a></li>
+                <li><a href="#">Economía</a></li>
+                <li><a href="#">Deportes</a></li>
+                <li><a href="#">Cultura</a></li>
+                <li><a href="#">Tecnología</a></li>
+                <li><a href="#">Espectáculos</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="main-content container">
+        <!-- Noticia Principal -->
+        <section class="featured-news">
+            <article class="main-article">
+                <div class="article-img">
+                    <!-- El usuario agregará la imagen aquí -->
+                    <img src="" alt="Imagen noticia principal" class="placeholder-img">
+                </div>
+                <div class="article-body">
+                    <h2>Histórico avance en la energía sustentable local</h2>
+                    <p class="description">
+                        Una nueva planta de energía solar comenzó a operar esta mañana, prometiendo abastecer al 40% de la ciudad con energía limpia y renovable.
+                    </p>
+                    <a href="#" class="read-more">Leer noticia completa</a>
+                </div>
+            </article>
+        </section>
+
+        <!-- Noticias Secundarias -->
+        <section class="secondary-news">
+            <article class="secondary-article">
+                <div class="article-img-small">
+                    <img src="" alt="Noticia secundaria" class="placeholder-img">
+                </div>
+                <h3>Finalizan las obras en el centro histórico</h3>
+                <a href="#" class="read-more">Más info</a>
+            </article>
+
+            <article class="secondary-article">
+                <h3>El equipo local se prepara para la gran final</h3>
+                <p>Sin imagen, solo título y descripción breve.</p>
+                <a href="#" class="read-more">Ver detalles</a>
+            </article>
+
+            <article class="secondary-article">
+                <div class="article-img-small">
+                    <img src="" alt="Tecnología" class="placeholder-img">
+                </div>
+                <h3>Lanzamiento de la nueva red 6G en el país</h3>
+                <a href="#" class="read-more">Seguir leyendo</a>
+            </article>
+
+            <article class="secondary-article">
+                <h3>Nuevas tendencias literarias para este invierno</h3>
+                <a href="#" class="read-more">Ver recomendados</a>
+            </article>
+        </section>
+
+        <!-- Publicidades -->
+        <aside class="sidebar-ads">
+            <div class="ad-container">
+                <span>PUBLICIDAD</span>
+                <img src="" alt="Publicidad 1" class="ad-img">
+            </div>
+            <div class="ad-container">
+                <span>PUBLICIDAD</span>
+                <img src="" alt="Publicidad 2" class="ad-img">
+            </div>
+        </aside>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-info">
+                <h3>El Horizonte</h3>
+                <p>&copy; 2026 - Todos los derechos reservados.</p>
+            </div>
+            <div class="footer-links">
+                <ul>
+                    <li><a href="#">Contacto</a></li>
+                    <li><a href="#">Términos y condiciones</a></li>
+                    <li><a href="#">Privacidad</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Actualizar fecha automáticamente si fuera necesario
+        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        document.getElementById('current-date').innerText = new Date().toLocaleDateString('es-ES', options);
+    </script>
+</body>
+</html>

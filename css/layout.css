@@ -1,0 +1,156 @@
+/* Layout Principal con Flexbox - Mobile First */
+
+/* Header */
+.header {
+    background-color: #fff;
+    padding: 20px 0;
+    border-bottom: 3px solid #333;
+    text-align: center;
+}
+
+.header-top {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
+/* Navegación */
+.main-nav {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+}
+
+.nav-links {
+    display: none; /* Oculto en móvil por defecto */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.nav-links li {
+    padding: 10px 0;
+    border-bottom: 1px solid #444;
+}
+
+.nav-links a {
+    color: #fff;
+    display: block;
+}
+
+.mobile-menu-icon {
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* Main Content Area */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px 0;
+}
+
+/* Grid de noticias secundarias en móvil */
+.secondary-news {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Publicidades en móvil */
+.sidebar-ads {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Footer */
+.main-footer {
+    background-color: #222;
+    color: #ccc;
+    padding: 40px 0;
+    margin-top: 50px;
+}
+
+.footer-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* --- Media Queries (Tablet y Escritorio) --- */
+
+@media (min-width: 768px) {
+    /* Header en desktop */
+    .header-top {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    /* Navegación en desktop */
+    .mobile-menu-icon {
+        display: none; /* Ocultar hamburguesa */
+    }
+
+    .nav-links {
+        display: flex; /* Mostrar links horizontalmente */
+        justify-content: center;
+        gap: 20px;
+        border: none;
+    }
+
+    .nav-links li {
+        border: none;
+        padding: 0;
+    }
+
+    /* Layout principal en dos columnas */
+    .main-content {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .featured-news {
+        flex: 2; /* Ocupa más espacio */
+        min-width: 60%;
+    }
+
+    .sidebar-ads {
+        flex: 1;
+        min-width: 250px;
+    }
+
+    /* Noticias secundarias abajo de la principal pero en grid */
+    .secondary-news {
+        flex-basis: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .secondary-article {
+        flex: 1 1 45%; /* Dos por fila */
+    }
+
+    .footer-grid {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+@media (min-width: 1024px) {
+    /* Tres noticias por fila en escritorio grande */
+    .secondary-article {
+        flex: 1 1 30%;
+    }
+}

@@ -1,0 +1,68 @@
+/* Estilos para componentes específicos */
+
+/* Noticias */
+.main-article {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 4px;
+}
+
+.secondary-article {
+    background-color: #fff;
+    padding: 15px;
+    border-left: 4px solid #333;
+}
+
+/* Imágenes y Placeholders */
+.article-img, .article-img-small, .ad-img {
+    background-color: #ddd;
+    width: 100%;
+    min-height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    position: relative;
+    border: 1px dashed #999;
+}
+
+.article-img::after, .article-img-small::after, .ad-img::after {
+    content: 'Espacio para imagen';
+    color: #888;
+    font-size: 0.8rem;
+}
+
+.placeholder-img, .ad-img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Publicidades */
+.ad-container {
+    background-color: #eee;
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.ad-container span {
+    font-size: 0.7rem;
+    color: #999;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Footer links */
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links a {
+    color: #aaa;
+}
+
+.footer-links a:hover {
+    color: #fff;
+}

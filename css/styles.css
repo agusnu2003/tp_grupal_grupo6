@@ -1,0 +1,21 @@
+/* Archivo principal que importa los módulos de CSS */
+
+@import url('typography.css');
+@import url('layout.css');
+@import url('components.css');
+
+/* Estilos globales rápidos */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    width: 95%;
+    max-width: 1200px;
+    margin: 0 auto;
+}

@@ -1,0 +1,47 @@
+/* Tipografía y Colores */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+}
+
+h1 {
+    font-family: 'Georgia', serif;
+    font-size: 3rem;
+    margin: 10px 0;
+    letter-spacing: 2px;
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: #222;
+}
+
+h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+a {
+    text-decoration: none;
+    color: #0056b3;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.date, .location {
+    font-size: 0.9rem;
+    color: #666;
+    text-transform: uppercase;
+}
+
+.read-more {
+    font-weight: bold;
+    color: #d32f2f;
+}
